@@ -1,8 +1,8 @@
-const rlSync = require('readline-sync')
+const rlSync = require('readline-sync');
 
 //ex1 - Isn't It Odd?
 
-const isOdd = (num) => !!(num % 2)
+const isOdd = (num) => !!(num % 2);
 
 console.log(isOdd(2)); // => false
 console.log(isOdd(5)); // => true
