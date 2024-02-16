@@ -4,7 +4,7 @@ const readline = require('readline-sync');
 
 function greetings(arr, obj) {
   return `Hello, ${arr.join(" ")}! ` +
-  `Nice to have a ${obj.title} ${obj.occupation} around.`
+  `Nice to have a ${obj.title} ${obj.occupation} around.`;
 }
 
 console.log(
@@ -75,7 +75,7 @@ console.log(xor(true, true) === false);   // true
 // ex8 - Odd Lists
 
 function oddities(arr) {
-  return arr.filter((_, idx) => !(idx % 2))
+  return arr.filter((_, idx) => !(idx % 2));
 }
 
 console.log(oddities([2, 3, 4, 5, 6])); // logs [2, 4, 6]
@@ -115,6 +115,7 @@ console.log(centerOf('x'));                 // "x"
 
 // ex12 - Always Return Negative
 
+// eslint-disable-next-line no-confusing-arrow
 let negative = (num) => (num < 0) ? num : (-1 * num);
 
 console.log(negative(5));     // -5

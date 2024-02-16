@@ -51,13 +51,14 @@ function findFibonacciIndexByLength(size) {
   let idx = 2n;
   while (true) {
     let curr = fibo[idx - 1n] + fibo[idx - 2n];
-    if (BigInt(String(curr).length) === size) return idx+1n;
+    if (BigInt(String(curr).length) === size) return idx + 1n;
     fibo[idx] = curr;
+    // eslint-disable-next-line operator-assignment
     idx = idx + 1n;
   }
 }
 
-console.log(findFibonacciIndexByLength(2n) === 7n);    
+console.log(findFibonacciIndexByLength(2n) === 7n);
 console.log(findFibonacciIndexByLength(3n) === 12n);
 console.log(findFibonacciIndexByLength(10n) === 45n);
 console.log(findFibonacciIndexByLength(16n) === 74n);
@@ -114,11 +115,11 @@ let avg = arr => arr.reduce((acc, curr) => acc + curr, 0) / arr.length;
 
 function getGrade(...scores) {
   let minScores = [0, 60, 70, 80, 90];
-  let grades = ['F', 'D', 'C', 'B', 'A']
+  let grades = ['F', 'D', 'C', 'B', 'A'];
   let avgScore = avg(scores);
   let idx = 0;
   while ((idx < grades.length - 1) && (avgScore >= minScores[idx + 1])) {
-    idx++; 
+    idx++;
   }
   return grades[idx];
 }

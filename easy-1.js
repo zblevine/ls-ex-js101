@@ -1,3 +1,9 @@
+/* eslint-disable no-confusing-arrow */
+/* eslint-disable radix */
+/* eslint-disable no-trailing-spaces */
+/* eslint-disable id-length */
+/* eslint-disable indent */
+/* eslint-disable max-len */
 const rlSync = require('readline-sync');
 
 //ex1 - Isn't It Odd?
@@ -26,10 +32,10 @@ for (let i = 2; i <= 98; i += 2) {
 //ex4 - How big is the room?
 
 let roomLength = rlSync.question('Enter the length of the room in meters: ');
-let roomWidth = rlSync.question('Enter the width of the room in meters: ')
+let roomWidth = rlSync.question('Enter the width of the room in meters: ');
 let areaInMeters = (parseInt(roomLength) * parseInt(roomWidth)).toFixed(2);
 let areaInFeet = (areaInMeters * 10.7639).toFixed(2);
-console.log(`The area of the room is ${areaInMeters} square meters (${areaInFeet} square feet).`)
+console.log(`The area of the room is ${areaInMeters} square meters (${areaInFeet} square feet).`);
 
 //ex5 - Tip Calculator
 
@@ -37,8 +43,8 @@ let bill = parseInt(rlSync.question('What is the bill? '));
 let tipPct = parseInt(rlSync.question('What is the tip percentage? '));
 let tip = bill * tipPct / 100;
 
-console.log(`The tip is $${tip.toFixed(2)}`)
-console.log(`The total is $${(tip + bill).toFixed(2)}`)
+console.log(`The tip is $${tip.toFixed(2)}`);
+console.log(`The total is $${(tip + bill).toFixed(2)}`);
 
 
 //ex6 - Sum or Product of Consecutive Integers
